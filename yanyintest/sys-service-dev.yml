@@ -1,0 +1,50 @@
+spring:
+  application:
+    # 服务名称
+    name: sys-service
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    hostname: 127.0.0.1
+    # 允许显示服务的IP地址，false：则显示主机名称
+    # prefer-ip-address: true
+    # 实例标识，消费者通过注册中心找到此实例；实例为具体的服务
+    #    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+    # 设置状态页，用于提供消费者查找具体的服务方法
+    # status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/smoke?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    # 下面的配置项是Druid特有的配置
+    initial-size: 5
+    min-idle: 5
+    max-active: 300
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 1 FROM DUAL
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    filters: stat
+#redis:
+#  host: 192.168.51.65
+#  pwd: 1234abcD
+#  port: 6179
+#  maxIdle: 300
+#  maxTotal: 60000
+#  maxWaitMillis: 3000
+#  testOnBorrow: false
+#  testOnReturn: false
