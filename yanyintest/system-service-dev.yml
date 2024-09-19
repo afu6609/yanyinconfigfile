@@ -25,16 +25,6 @@ spring:
     test-on-return: false
     filters: stat
 
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 600000
-
 
 
 eureka:
