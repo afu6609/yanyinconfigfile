@@ -1,4 +1,7 @@
 spring:
+  cloud:
+    config:
+      bootstrap: true
   jpa:
     hibernate:
       ddl-auto: update
