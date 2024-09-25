@@ -1,3 +1,5 @@
+jwt:
+  secret: 35018245011Di008F730632f1401E3CD
 spring:
   jpa:
     hibernate:
