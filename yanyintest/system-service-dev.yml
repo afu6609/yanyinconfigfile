@@ -11,7 +11,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres?charset=utf8&sslmode=disable
-    username: root
+    username: postgres
     password: root
     initial-size: 5
     min-idle: 5
