@@ -7,7 +7,7 @@ spring:
     gateway:
       routes:
         - id: system-service
-          uri: lb://SYSYTEM-SERVICE
+          uri: lb://system-service
           predicates:
             - Path=/**
           filters:
