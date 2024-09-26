@@ -9,7 +9,7 @@ spring:
         - id: system-service
           uri: lb://SYSYTEM-SERVICE
           predicates:
-            - Path=/user/**
+            - Path=/**
           filters:
             - RemoveRequestHeader=Cookie
 eureka:
