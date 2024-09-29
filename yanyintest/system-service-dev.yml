@@ -1,10 +1,15 @@
+# springdoc-openapi项目配置
 springdoc:
-  api-docs:
-    enabled: true # 开启OpenApi接口
-    path: /v3/api-docs  # 自定义路径，默认为 "/v3/api-docs"
   swagger-ui:
-    enabled: true # 开启swagger界面，依赖OpenApi，需要OpenApi同时开启
-    path: /swagger-ui/index.html # 自定义路径，默认为"/swagger-ui/index.html"
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.yan.system_service.controller
 # knife4j的增强配置，不需要增强可以不配
 knife4j:
   enable: true
