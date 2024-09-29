@@ -17,7 +17,7 @@ spring:
         - id: system-service-api
           uri: lb://system-service
           predicates:
-            - Path=/doc.html
+            - Path=/swagger-ui/index.html
 eureka:
   instance:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
