@@ -1,14 +1,21 @@
-# springdoc-openapi项目配置
+# springdoc-openapi 项目配置
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
-    enabled: true
+    tags-sorter: alpha
+    operations-sorter: alpha
   api-docs:
     path: /v3/api-docs
-    enabled: true
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan:
+        # 配置接口文档扫描包路径，每个服务的路径不同，下面是系统服务(youlai-system)的包路径
+        - package com.yan.system_service.controller
+
 # knife4j的增强配置，不需要增强可以不配
 knife4j:
-  enable: true
+  enable: false
   setting:
     language: zh_cn
 jwt:
