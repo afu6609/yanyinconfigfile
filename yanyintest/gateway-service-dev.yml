@@ -22,3 +22,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+knife4j:
+  gateway:
+    enable: true
+    # 配置 Knife4j 文档的基本信息
+    route-filter: true
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
