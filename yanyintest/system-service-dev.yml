@@ -63,7 +63,3 @@ knife4j:
     language: zh_cn
 jwt:
   secret: 35018245011Di008F730632f1401E3CD
-aliyun:
-  AccessKeyId: LTAI5tLMx3Q78qECaLj6SKYm
-  AccessKeySecret: vO5xMJB4dvYvRYTTiUM1dnbvdDoT84
-  BucketName: image-logo-my-test
