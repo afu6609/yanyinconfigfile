@@ -66,3 +66,4 @@ jwt:
 aliyun:
   AccessKeyId: LTAI5tLMx3Q78qECaLj6SKYm
   AccessKeySecret: vO5xMJB4dvYvRYTTiUM1dnbvdDoT84
+  BucketName: image-logo-my-test
