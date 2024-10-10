@@ -9,11 +9,12 @@ spring:
         - id: system-service
           uri: lb://system-service
           predicates:
-            - Path=/user/**
+            - Path=/**
+          #  - Path=/user/**
           filters:
             - RemoveRequestHeader=Cookie
             # 移除路径前缀/user
-            - StripPrefix=1
+          #  - StripPrefix=1
 eureka:
   instance:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
