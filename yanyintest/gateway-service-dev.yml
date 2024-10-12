@@ -15,6 +15,21 @@ spring:
             - RemoveRequestHeader=Cookie
             # 移除路径前缀/user
           #  - StripPrefix=1
+    globalcors:
+      # 跨域配置(可以在代码里面处理允许跨域，也可在这里全局处理)
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: "*"
+          allowedHeaders: "*"
+          allowCredentials: true
+          allowedMethods:
+            - GET
+            - POST
+            - OPTIONS
+            - DELETE
+            - PUT
+            - HEAD
+            - PATCH
 eureka:
   instance:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
