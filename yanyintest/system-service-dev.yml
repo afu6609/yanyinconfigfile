@@ -10,7 +10,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://10.1.1.216:5432/postgres?charset=utf8&sslmode=disable
+    url: jdbc:postgresql://localhost:5432/postgres?charset=utf8&sslmode=disable
     username: postgres
     password: root
     initial-size: 5
