@@ -5,11 +5,6 @@ spring:
     name: gateway-service
   cloud:
     gateway:
-      discovery:
-        locator:
-          # 启用服务发现
-          enabled: true
-          lower-case-service-id: true
       routes:
         - id: system-service
           uri: lb://system-service
@@ -54,3 +49,7 @@ knife4j:
       # OpenAPI 3.0 规范
       version: openapi3
       enabled: true
+      excluded-services:
+        # 排除order开头的服务
+        - CONFIG.*
+        - SYSTEM.*
