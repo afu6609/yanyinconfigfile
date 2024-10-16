@@ -50,5 +50,5 @@ knife4j:
       version: openapi3
       enabled: true
       excluded-services:
-        # 排除order开头的服务
-        - CONFIG.*
+        # 排除config开头的服务
+        - config.*
