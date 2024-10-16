@@ -44,11 +44,7 @@ knife4j:
   gateway:
     enabled: true
     # 指定服务发现的模式聚合微服务文档，并且是默认 default 分组
-    strategy: manual     # discover 自动
-    routes:
-      - name: 后台服务
-        service-name: sysytem-service
-        url: /v3/api-docs
+    strategy: discover
     discover:
       # OpenAPI 3.0 规范
       version: openapi3
