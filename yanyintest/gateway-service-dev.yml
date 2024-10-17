@@ -6,6 +6,7 @@ spring:
   cloud:
     gateway:
       globalcors:
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
         # 跨域配置(可以在代码里面处理允许跨域，也可在这里全局处理)
         corsConfigurations:
           '[/**]':
